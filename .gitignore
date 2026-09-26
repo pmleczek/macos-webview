@@ -1,0 +1,53 @@
+# macOS
+.DS_Store
+
+# Editors
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# Dependencies
+node_modules/
+
+# JS build output & caches
+dist/
+coverage/
+*.tsbuildinfo
+.eslintcache
+.vite/
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Swift Package Manager
+.build/
+.swiftpm/
+
+# Xcode
+DerivedData/
+xcuserdata/
+*.xcuserstate
+*.xcscmblueprint
+
+# macOS build & distribution artifacts
+build/
+*.app
+*.dmg
+*.xcarchive
+*.dSYM
+*.dSYM.zip
+
+# Signing & notarization secrets
+*.p12
+*.p8
+*.cer
+*.mobileprovision
+*.provisionprofile
