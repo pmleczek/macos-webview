@@ -8,12 +8,14 @@
     "format:check": "oxfmt --check -c .oxfmtrc.jsonc",
     "format:fix": "oxfmt --write -c .oxfmtrc.jsonc",
     "lint:check": "oxlint -c .oxlintrc.jsonc",
-    "lint:fix": "oxlint --fix -c .oxlintrc.jsonc"
+    "lint:fix": "oxlint --fix -c .oxlintrc.jsonc",
+    "typecheck": "pnpm run -r typecheck"
   },
   "devDependencies": {
     "lefthook": "catalog:",
     "oxfmt": "catalog:",
-    "oxlint": "catalog:"
+    "oxlint": "catalog:",
+    "typescript": "catalog:"
   },
   "packageManager": "pnpm@11.3.0"
 }
