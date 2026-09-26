@@ -12,3 +12,4 @@ trustPolicy: 'no-downgrade'
 catalog:
   # Tooling
   oxfmt: '^0.68.0'
+  oxlint: '^1.83.0'
