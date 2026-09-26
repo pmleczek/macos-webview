@@ -13,6 +13,7 @@
   },
   "options": {
     "reportUnusedDisableDirectives": "warn",
+    "typeAware": true,
   },
   "ignorePatterns": ["**/GeneratedModules/**"],
   // Rules
