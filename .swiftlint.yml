@@ -1,0 +1,137 @@
+# swift-format owns layout (see .swift-format); SwiftLint only checks semantics
+# and code quality. Rules that overlap with or contradict the formatter are
+# disabled below.
+
+strict: true
+
+excluded:
+  - '**/.build'
+  - '**/.swiftpm'
+  - '**/DerivedData'
+  - '**/node_modules'
+  - '**/build'
+
+disabled_rules:
+  # Layout, owned by swift-format
+  - closing_brace
+  - colon
+  - comma
+  - control_statement
+  - empty_parentheses_with_trailing_closure
+  - leading_whitespace
+  - line_length
+  - opening_brace
+  - return_arrow_whitespace
+  - statement_position
+  - switch_case_alignment
+  - trailing_comma
+  - trailing_newline
+  - trailing_semicolon
+  - trailing_whitespace
+  - vertical_parameter_alignment
+  - vertical_whitespace
+  # Duplicates of swift-format lint rules
+  - private_over_fileprivate
+  - redundant_void_return
+  - syntactic_sugar
+  - void_return
+  # Stale TODOs are tracked in issues, not blocked at commit time
+  - todo
+
+opt_in_rules:
+  # Concurrency
+  - async_without_await
+  - unhandled_throwing_task
+  # Correctness
+  - discarded_notification_center_observer
+  - fatal_error_message
+  - identical_operands
+  - lower_acl_than_parent
+  - overridden_super_call
+  - prohibited_super_call
+  - unowned_variable_capture
+  - yoda_condition
+  # Safety
+  - force_unwrapping
+  - implicitly_unwrapped_optional
+  - discouraged_optional_boolean
+  # Idiomatic / modern Swift
+  - contains_over_filter_count
+  - contains_over_filter_is_empty
+  - contains_over_first_not_nil
+  - contains_over_range_nil_comparison
+  - convenience_type
+  - direct_return
+  - empty_collection_literal
+  - empty_count
+  - empty_string
+  - explicit_init
+  - first_where
+  - flatmap_over_map_reduce
+  - last_where
+  - legacy_multiple
+  - legacy_objc_type
+  - modifier_order
+  - optional_enum_case_matching
+  - prefer_self_in_static_references
+  - prefer_self_type_over_type_of_self
+  - prefer_zero_over_explicit_init
+  - redundant_nil_coalescing
+  - redundant_type_annotation
+  - reduce_into
+  - return_value_from_void_function
+  - self_binding
+  - shorthand_optional_binding
+  - sorted_first_last
+  - toggle_bool
+  - unneeded_parentheses_in_closure_argument
+  - untyped_error_in_catch
+  # SwiftUI
+  - private_swiftui_state
+  # Tests
+  - balanced_xctest_lifecycle
+  - empty_xctest_method
+  - final_test_case
+  - single_test_class
+  - test_case_accessibility
+  - xct_specific_matcher
+
+# Only run by `swiftlint analyze` with a compiler log
+analyzer_rules:
+  - unused_declaration
+  - unused_import
+
+identifier_name:
+  min_length:
+    warning: 2
+  excluded:
+    - i
+    - x
+    - y
+    - z
+
+type_name:
+  min_length: 3
+  max_length: 50
+
+function_body_length:
+  warning: 60
+  error: 100
+
+type_body_length:
+  warning: 300
+  error: 500
+
+file_length:
+  warning: 500
+  error: 1000
+  ignore_comment_only_lines: true
+
+cyclomatic_complexity:
+  warning: 12
+  error: 20
+  ignores_case_statements: true
+
+nesting:
+  type_level: 2
+  function_level: 3

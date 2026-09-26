@@ -11,6 +11,16 @@ pre-commit:
         - 'pnpm-lock.yaml'
       run: pnpm exec oxfmt --no-error-on-unmatched-pattern --write {staged_files}
       stage_fixed: true
+    - name: swift-format
+      glob: '*.swift'
+      run: swift-format format --in-place --parallel {staged_files}
+      stage_fixed: true
+    - name: swift-format-lint
+      glob: '*.swift'
+      run: swift-format lint --strict --parallel {staged_files}
+    - name: swiftlint
+      glob: '*.swift'
+      run: swiftlint lint --quiet --force-exclude {staged_files}
     - name: lint
       glob: '*.{js,jsx,mjs,cjs,ts,tsx}'
       run: pnpm exec oxlint --no-error-on-unmatched-pattern {staged_files}
