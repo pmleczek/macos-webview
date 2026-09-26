@@ -14,3 +14,9 @@ pre-commit:
     - name: lint
       glob: '*.{js,jsx,mjs,cjs,ts,tsx}'
       run: pnpm exec oxlint --no-error-on-unmatched-pattern {staged_files}
+
+pre-push:
+  jobs:
+    - name: branch-name
+      run: bash scripts/branch-name.sh
+      use_stdin: true
