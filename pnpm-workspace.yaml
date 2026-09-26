@@ -9,7 +9,11 @@ resolvePeersFromWorkspaceRoot: true
 strictPeerDependencies: true
 trustPolicy: 'no-downgrade'
 
+allowBuilds:
+  lefthook: false
+
 catalog:
   # Tooling
+  lefthook: '^2.1.14'
   oxfmt: '^0.68.0'
   oxlint: '^1.83.0'
