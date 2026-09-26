@@ -34,6 +34,11 @@ pre-commit:
       glob: '{package.json,**/package.json,pnpm-workspace.yaml}'
       run: pnpm exec sherif --fail-on-warnings
 
+commit-msg:
+  jobs:
+    - name: commit-msg
+      run: bash scripts/commit-msg.sh {1}
+
 pre-push:
   jobs:
     - name: branch-name

@@ -9,8 +9,8 @@
 
 set -euo pipefail
 
-TYPES='build|chore|ci|docs|feat|fix|perf|refactor|revert|style|test'
-PATTERN="^(${TYPES})/[a-z0-9]+(-[a-z0-9]+)*$"
+source "$(dirname "${BASH_SOURCE[0]}")/commit-types.sh"
+PATTERN="^(${COMMIT_TYPES})/[a-z0-9]+(-[a-z0-9]+)*$"
 ALLOWED_BRANCHES=('main')
 ZERO_SHA_PATTERN='^0+$'
 
@@ -55,6 +55,6 @@ if ((${#invalid[@]} > 0)); then
     echo "Invalid branch name: \"${branch}\"" >&2
   done
   echo "Expected: <type>/<kebab-case-name>, e.g. chore/set-up-repository" >&2
-  echo "Allowed types: ${TYPES//|/, }" >&2
+  echo "Allowed types: ${COMMIT_TYPES//|/, }" >&2
   exit 1
 fi
