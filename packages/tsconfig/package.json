@@ -1,0 +1,9 @@
+{
+  "name": "@macos-webview/tsconfig",
+  "description": "Collection of shared TypeScript configurations",
+  "version": "1.0.0",
+  "private": true,
+  "exports": {
+    "./base": "./src/base.json"
+  }
+}

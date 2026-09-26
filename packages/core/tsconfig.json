@@ -1,0 +1,4 @@
+{
+  "extends": "@macos-webview/tsconfig/base",
+  "include": ["src"]
+}
