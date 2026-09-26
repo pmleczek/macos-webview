@@ -21,4 +21,5 @@ catalog:
   oxfmt: '^0.68.0'
   oxlint: '^1.83.0'
   oxlint-tsgolint: '^7.0.2002'
+  sherif: '^1.13.0'
   typescript: '^7.0.2'
