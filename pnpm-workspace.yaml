@@ -1,10 +1,14 @@
-auditLevel: "high"
+auditLevel: 'high'
 blockExoticSubdeps: true
 minimumReleaseAge: 10080
 minimumReleaseAgeStrict: true
-nodeLinker: "isolated"
+nodeLinker: 'isolated'
 preferFrozenLockfile: true
 preferOffline: false
 resolvePeersFromWorkspaceRoot: true
 strictPeerDependencies: true
-trustPolicy: "no-downgrade"
+trustPolicy: 'no-downgrade'
+
+catalog:
+  # Tooling
+  oxfmt: '^0.68.0'

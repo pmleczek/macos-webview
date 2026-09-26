@@ -3,5 +3,12 @@
   "description": "Monorepo for macos-webview project",
   "version": "0.0.0",
   "private": true,
+  "scripts": {
+    "format:check": "oxfmt --check -c .oxfmtrc.jsonc",
+    "format:fix": "oxfmt --write -c .oxfmtrc.jsonc"
+  },
+  "devDependencies": {
+    "oxfmt": "catalog:"
+  },
   "packageManager": "pnpm@11.3.0"
 }
