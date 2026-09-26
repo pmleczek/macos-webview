@@ -7,11 +7,14 @@
     "prepare": "lefthook install",
     "format:check": "oxfmt --check -c .oxfmtrc.jsonc",
     "format:fix": "oxfmt --write -c .oxfmtrc.jsonc",
+    "knip:check": "knip",
+    "knip:fix": "knip --fix",
     "lint:check": "oxlint -c .oxlintrc.jsonc",
     "lint:fix": "oxlint --fix -c .oxlintrc.jsonc",
     "typecheck": "pnpm run -r typecheck"
   },
   "devDependencies": {
+    "knip": "catalog:",
     "lefthook": "catalog:",
     "oxfmt": "catalog:",
     "oxlint": "catalog:",

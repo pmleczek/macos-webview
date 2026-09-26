@@ -27,6 +27,9 @@ pre-commit:
     - name: typecheck
       glob: '*.{ts,tsx}'
       run: pnpm run typecheck
+    - name: knip
+      glob: '*.{js,mjs,cjs,ts,tsx,json,jsonc,yaml}'
+      run: pnpm exec knip
     - name: sherif
       glob: '{package.json,**/package.json,pnpm-workspace.yaml}'
       run: pnpm exec sherif --fail-on-warnings
