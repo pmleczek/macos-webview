@@ -25,7 +25,12 @@ pre-commit:
       glob: '*.{js,jsx,mjs,cjs,ts,tsx}'
       run: pnpm exec oxlint --no-error-on-unmatched-pattern {staged_files}
     - name: typecheck
-      glob: '*.{ts,tsx}'
+      glob:
+        - '*.{ts,tsx}'
+        - '{tsconfig*.json,**/tsconfig*.json}'
+        - 'packages/tsconfig/**/*.json'
+        - '{package.json,**/package.json}'
+        - '{pnpm-workspace.yaml,pnpm-lock.yaml}'
       run: pnpm run typecheck
     - name: knip
       glob: '*.{js,mjs,cjs,ts,tsx,json,jsonc,yaml}'
@@ -42,5 +47,5 @@ commit-msg:
 pre-push:
   jobs:
     - name: branch-name
-      run: bash scripts/branch-name.sh
+      run: bash scripts/branch-name.sh {1} {2}
       use_stdin: true

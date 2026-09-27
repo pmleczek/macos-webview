@@ -21,6 +21,8 @@ message_file="${1:?Usage: $0 <commit message file>}"
 lines=()
 while IFS= read -r line || [[ -n "${line}" ]]; do
   [[ "${line}" == "${SCISSORS}" ]] && break
+  # Git strips trailing whitespace (including CR) from the stored message
+  line="${line%"${line##*[![:space:]]}"}"
   [[ "${line}" == \#* ]] && continue
   [[ "${line}" =~ ${BLANK_PATTERN} ]] && continue
   lines+=("${line}")

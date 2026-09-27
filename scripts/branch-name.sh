@@ -4,7 +4,7 @@
 #
 # As a pre-push hook, git passes the refs being pushed on stdin:
 #   <local ref> <local sha> <remote ref> <remote sha>
-# and the remote branch name is verified. When run manually (no stdin),
+# and the remote branch name is verified. When run manually (no arguments),
 # the current branch is verified instead.
 
 set -euo pipefail
@@ -29,7 +29,7 @@ is_valid() {
 
 branches=()
 
-if [[ -t 0 ]]; then
+if (($# == 0)); then
   current="$(git branch --show-current)"
   # Detached HEAD has no branch to verify
   if [[ -n "${current}" ]]; then
