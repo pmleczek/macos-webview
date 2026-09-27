@@ -1,14 +1,9 @@
 {
   "$schema": "https://www.schemastore.org/tsconfig.json",
-  // Shared defaults for every package in the monorepo.
-  // Do not extend this file directly - use "library", "node" or "react".
   "compilerOptions": {
-    /* Language and environment */
     "target": "esnext",
     "lib": ["esnext"],
     "useDefineForClassFields": true,
-
-    /* Modules */
     "module": "preserve",
     "moduleResolution": "bundler",
     "moduleDetection": "force",
@@ -16,8 +11,6 @@
     "isolatedModules": true,
     "verbatimModuleSyntax": true,
     "erasableSyntaxOnly": true,
-
-    /* Type checking */
     "strict": true,
     "noUncheckedIndexedAccess": true,
     "exactOptionalPropertyTypes": true,
@@ -25,8 +18,6 @@
     "noFallthroughCasesInSwitch": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-
-    /* Emit */
     "noEmit": true,
     "skipLibCheck": true
   }

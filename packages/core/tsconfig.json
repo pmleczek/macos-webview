@@ -1,4 +1,4 @@
 {
-  "extends": "@macos-webview/tsconfig/base",
+  "extends": "@macos-webview/tsconfig/browser",
   "include": ["src"]
 }

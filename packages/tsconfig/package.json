@@ -4,6 +4,9 @@
   "version": "1.0.0",
   "private": true,
   "exports": {
-    "./base": "./src/base.json"
+    "./base": "./src/base.json",
+    "./browser": "./src/browser.json",
+    "./node": "./src/node.json",
+    "./react": "./src/react.json"
   }
 }
