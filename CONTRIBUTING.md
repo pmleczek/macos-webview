@@ -2,6 +2,8 @@
 
 Thank you for your interest in contributing to macos-webview! Every contribution helps, whether it's a bug report, a fix or a documentation update.
 
+Please keep all communication respectful and constructive, in issues, discussions, pull requests and reviews alike. Be kind to others, assume good intent, and critique ideas and code, never people. Harassment, insults and discriminatory language are not tolerated, and the maintainers may remove comments or block users who don't follow these rules.
+
 - [Development Guide](#development-guide)
 
 - [AI Tools Policy](#ai-tools-policy)
