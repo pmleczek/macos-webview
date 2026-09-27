@@ -1,0 +1,40 @@
+{
+  // Options
+  "arrowParens": "always",
+  "bracketSameLine": false,
+  "bracketSpacing": true,
+  "embeddedLanguageFormatting": "auto",
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "insertFinalNewline": true,
+  "jsxSingleQuote": false,
+  "objectWrap": "preserve",
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "semi": true,
+  "singleAttributePerLine": false,
+  "singleQuote": true,
+  "tabWidth": 2,
+  "trailingComma": "all",
+  "useTabs": false,
+  // Import sorting
+  "sortImports": {
+    "newlinesBetween": true,
+    "groups": [
+      ["side_effect_style", "side_effect"],
+      ["type-external", "value-external"],
+      [
+        "type-parent",
+        "type-sibling",
+        "type-index",
+        "value-parent",
+        "value-sibling",
+        "value-index",
+      ],
+      "unknown",
+    ],
+  },
+  // package.json sorting
+  "sortPackageJson": false,
+}

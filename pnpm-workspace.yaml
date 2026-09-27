@@ -1,0 +1,26 @@
+packages:
+  - 'packages/*'
+
+auditLevel: 'high'
+blockExoticSubdeps: true
+minimumReleaseAge: 10080
+minimumReleaseAgeStrict: true
+nodeLinker: 'isolated'
+preferFrozenLockfile: true
+preferOffline: false
+resolvePeersFromWorkspaceRoot: true
+strictPeerDependencies: true
+trustPolicy: 'no-downgrade'
+
+allowBuilds:
+  lefthook: false
+
+catalog:
+  # Tooling
+  knip: '^6.37.0'
+  lefthook: '^2.1.14'
+  oxfmt: '^0.68.0'
+  oxlint: '^1.83.0'
+  oxlint-tsgolint: '^7.0.2002'
+  sherif: '^1.13.0'
+  typescript: '^7.0.2'
