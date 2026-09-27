@@ -10,3 +10,18 @@
 - Git hooks (`lefthook.yml`) check these rules: the commit message on commit, the branch name on push.
 - Before each commit, hooks also format (auto-restaging fixes) and lint the staged files, and run `typecheck`, `knip` and `sherif` on the whole project.
 - Do not skip the hooks with `--no-verify` or `LEFTHOOK=0`. If a hook fails, fix the cause.
+
+## Code Conventions
+
+### Code Quality
+
+- Write a comment only when the code can't explain itself: why a choice was made, a workaround and what it works around, a hidden constraint, or a surprising behavior.
+- Do not write comments that restate the code, narrate steps (`// loop over items`) or describe the change (`// added X`, `// fixed bug`). Rename things instead of explaining them.
+
+### Dependencies
+
+- Ask before adding, removing or upgrading any dependency (npm package, Swift package, or Homebrew formula in `Brewfile`). Give the package name, why it's needed, and alternatives considered, including writing it ourselves or using a platform API.
+- Prefer what's already available: the standard library, platform APIs (Foundation, WebKit), or an existing dependency. Don't add a package for something a few lines of code can do.
+- Use pnpm only. For tooling and dependencies shared across the monorepo specify the versions in the `catalog` in `pnpm-workspace.yaml` and reference them as `catalog:` in `package.json`. For dependencies used only by a single package a version can be specified directly in a package's `package.json`.
+- Do not change the dependency safety settings in `pnpm-workspace.yaml` (`minimumReleaseAge`, `trustPolicy`, `blockExoticSubdeps`, `allowBuilds`, etc.) to get an install to work. If an install fails because of them, stop and report it.
+- Do not allow install scripts (`allowBuilds`) for a new package without approval.
